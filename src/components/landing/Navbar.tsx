@@ -18,12 +18,12 @@ export function Navbar() {
           <a href="#empresas" className="hover:text-foreground transition-colors">Empresas</a>
         </div>
         <div className="flex items-center gap-2">
-          <button className="hidden sm:inline-flex px-4 py-2 text-sm font-semibold text-foreground/80 hover:text-foreground">
+          <Link to="/auth" className="hidden sm:inline-flex px-4 py-2 text-sm font-semibold text-foreground/80 hover:text-foreground">
             Entrar
-          </button>
-          <button className="px-4 py-2.5 bg-brand-dark text-white rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
+          </Link>
+          <Link to="/auth" className="px-4 py-2.5 bg-brand-dark text-white rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
             Criar Conta Grátis
-          </button>
+          </Link>
         </div>
       </div>
     </nav>

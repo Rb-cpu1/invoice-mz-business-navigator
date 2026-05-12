@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router";
+
 export function Hero() {
   return (
     <section className="px-6 lg:px-8 py-20 lg:py-28 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
@@ -18,12 +20,12 @@ export function Hero() {
           Do NUIT ao IVA, tem tudo sob controlo.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="px-8 py-4 bg-brand text-brand-foreground rounded-xl font-bold text-base shadow-elegant hover:scale-[1.02] transition-transform">
+          <Link to="/auth" className="px-8 py-4 bg-brand text-brand-foreground rounded-xl font-bold text-base shadow-elegant hover:scale-[1.02] transition-transform text-center">
             Começar Agora
-          </button>
-          <button className="px-8 py-4 border border-border bg-background rounded-xl font-bold text-base hover:bg-muted transition-colors">
-            Ver Demo
-          </button>
+          </Link>
+          <a href="#funcionalidades" className="px-8 py-4 border border-border bg-background rounded-xl font-bold text-base hover:bg-muted transition-colors text-center">
+            Ver funcionalidades
+          </a>
         </div>
         <div className="mt-10 flex items-center gap-6 text-xs text-muted-foreground">
           <div className="flex items-center gap-2">
