@@ -61,7 +61,7 @@ function InvoicesPage() {
   });
 
   const updateStatus = useMutation({
-    mutationFn: async ({ id, status }: { id: string; status: string }) => {
+    mutationFn: async ({ id, status }: { id: string; status: "draft" | "sent" | "paid" | "cancelled" }) => {
       const { error } = await supabase.from("invoices").update({ status }).eq("id", id);
       if (error) throw error;
     },
