@@ -119,7 +119,7 @@ function InvoicesPage() {
                 <td className="p-4">
                   <select
                     value={i.status}
-                    onChange={(e) => updateStatus.mutate({ id: i.id, status: e.target.value })}
+                    onChange={(e) => updateStatus.mutate({ id: i.id, status: e.target.value as "draft" | "sent" | "paid" | "cancelled" })}
                     className={`text-xs font-bold px-2 py-1 rounded-full border-0 ${statusLabels[i.status]?.cls}`}
                   >
                     {Object.entries(statusLabels).map(([v, s]) => <option key={v} value={v}>{s.label}</option>)}
